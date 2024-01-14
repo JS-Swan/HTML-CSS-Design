@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: #1b1b1b;
+    height: 80px;
+    width: 100%;
+    padding: 0 50px 0 100px;
+    align-items: center;
+}
+nav .logo{
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    transition: all 0.5s;
+}
+nav ul li {
+    list-style: none;
+    margin: 0 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: azure;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 15px;
+   transition: all 0.5s ease;
+}
+nav ul li a.active,
+ ul li a:hover{
+    background: #fff;
+    color: #111;
+}
+.menu-btn i{
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    display: none;
+}
+#click{
+    display: none;
+}
+#click:checked ~ ul{
+  left: 0;
+}
+#click:checked ~ .menu-btn i::before{
+    content: '\f00d';
+}
+@media (max-width:640px){
+    nav .menu-btn i{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        background: #1b1b1b;
+        display: block; 
+       text-align: center;
+    }
+    nav ul  li{
+        width: 100%;
+        margin: 40px 0;
+    }
+    nav ul  li a{
+        display: block;
+        font-size: 20px;
+    }
+    nav ul li a.active,
+    ul li a:hover{
+    background: none;
+    color: cyan;
+    }
+  
+}
