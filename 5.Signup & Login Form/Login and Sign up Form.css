@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: #dfe9f5;
+}
+.wrapper{
+   background: #fff;
+   width: 330px;
+   padding: 2rem 1rem;
+   margin: 50px auto; 
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0 20px 35px rgba(0,0,0, 0.1);
+   
+}
+h1{
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: #07001f;
+}
+form input{
+    outline: none;
+    width: 92%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    background: #e4e4e4;
+}
+button{
+    font-size: 1rem;
+    width: 90%;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    color: #fff;
+    background: rgb(17,107,143);
+    border: none;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+input:focus{
+    border: 1.3px solid  rgb(192,192,192);
+}
+button:hover{
+    background: rgb(17,107,143,0.877);
+}
+.terms{
+    margin-top: 0.2rem;
+}
+.terms input{
+    height: 1em;
+    width: 1em;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.terms label{
+    font-size: 0.7rem;
+}
+.terms a{
+    text-decoration: none;
+    color: rgb(17,107,143);
+}
+.member{
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    color: #636363;
+}
+.member a{
+    color:rgb(17,107,143);
+    text-decoration: none;
+}
+.recover{
+    font-size: 0.7rem;
+    text-align: right;
+    margin: 0.3rem 1rem 0 0;
+}
+.recover a{
+    text-decoration: none;
+    color: rgb(17,107,143);
+}
