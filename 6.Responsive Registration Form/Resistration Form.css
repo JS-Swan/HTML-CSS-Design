@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+    height: 100vh;
+    padding: 10px;
+}
+.container{
+    background: white;
+    padding: 20px 25px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+   margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .user-details .input-box .details{
+    display: block;
+    font-size: 500;
+    margin-bottom: 5px;
+}
+form .user-details .input-box input{
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+form .user-details .input-box input:focus,
+form .user-details .input-box :valid{
+   border-color: #9b59b6;
+}
+
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .gender-details .catagory{
+    display: flex;
+    justify-content: space-between;
+   margin: 15px 0;
+   width: 80%;
+
+}
+
+form .gender-details .catagory label{
+  display: flex;   
+  align-items: center;
+}
+form .gender-details .catagory label .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+#dot-1:checked ~ .catagory label .one,
+#dot-2:checked ~ .catagory label .two,
+#dot-3:checked ~ .catagory label .three{
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button input{
+    height: 100%;
+     width: 100%;
+     outline: none;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     color: aliceblue;
+     background: linear-gradient(135deg,#71b7e6,#9b59b6);
+     border-radius: 5px;
+     border: none;
+     padding: 5px 0;
+     
+}
+form .button input:hover{
+    background: linear-gradient(-135deg,#71b7e6,#9b59b6);
+}
+
+/* Responsive */
+@media (max-width:640px){
+   .container {
+    max-width: 100%;
+   }
+   form .user-details .input-box{
+    margin-bottom: 15px;
+     width: 100%;
+ }
+ form .gender-details .catagory{
+    width: 100%;
+ }
+ .container form .user-details{
+    max-height: 280px;
+    overflow-y: scroll;
+ }
+}
