@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: skyblue;
+}
+.wrapper{
+    background: #fff;
+    margin: 130px auto;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+   padding: 25px 30px;
+}
+.wrapper header{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+.wrapper nav{
+   /* background: red; */
+   height: 50px;
+   display: flex;
+   align-items: center;
+   width: 80%;
+   position: relative;
+
+}
+.wrapper nav label{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+   line-height: 50px;
+   font-size: 17px;
+   z-index: 1;
+}
+.wrapper nav label i{
+    padding-left: 5px;
+}
+#home:checked ~ nav label.home,
+#code:checked ~ nav label.code,
+#blog:checked ~ nav label.blog,
+#envelope:checked ~ nav label.envelope,
+#user:checked ~ nav label.user{
+    color: aliceblue;
+}
+.wrapper nav .slider{
+    background: skyblue;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    border-radius: 5px;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s ease;
+}
+#code:checked ~ nav .slider{
+    left: 20%;
+}
+#blog:checked ~ nav .slider{
+    left: 40%;
+}
+#user:checked ~ nav .slider{
+    left: 80%;
+}
+#envelope:checked ~ nav .slider{
+    left: 60%;
+}
+input[type="radio"]{
+  display: none;
+}
+section .content .title{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 30px 0 5px 0;
+}
+section .content {
+    display: none;
+}
+#home:checked ~ section .content-1,
+#code:checked ~ section .content-2,
+#blog:checked ~ section .content-3,
+#envelope:checked ~ section .content-4,
+#user:checked ~ section .content-5
+{
+    display: block;
+}
+
