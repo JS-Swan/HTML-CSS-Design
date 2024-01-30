@@ -1,0 +1,37 @@
+html,body{
+    background: #333;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.slider{
+    height: 500px;
+    width: 500px;
+    background: url(./1.jfif);
+    background-size: cover;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.3);
+    animation: animate 10s infinite;
+    border-radius: 10px;
+
+}
+@keyframes animate{
+    20%{
+        background: url(./2.jfif);
+    background-size: cover; 
+    }
+    40%{
+        background: url(./3.jfif);
+    background-size: cover; 
+    }
+    60%{
+        background: url(./4.jfif);
+    background-size: cover; 
+    }
+    80%{
+        background: url(./5.jfif);
+    background-size: cover; 
+    }
+}
