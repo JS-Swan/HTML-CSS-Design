@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    background: #125689;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 15px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.680,-0.55,0.2,1.55);
+}
+.wrapper .icon span{
+    /* position: relative; */
+    height: 60px;
+    width: 60px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    display: block;
+    position: relative;
+    z-index: 2
+}
+.wrapper .icon i{
+    line-height: 60px;
+    font-size: 30px;
+
+}
+.wrapper .icon .tooltip{
+    font-size: 18px;
+    background: white;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.680,-0.55,0.2,1.55);
+}
+.wrapper .icon .tooltip::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.680,-0.55,0.2,1.55);
+}
+.wrapper .icon:hover .tooltip{
+  top: -75px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span i{
+    color: white;
+}
+
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before,
+.wrapper .facebook:hover span{
+    background: blue;
+} 
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before,
+.wrapper .whatsapp:hover span{
+    background: green;
+} 
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before,
+.wrapper .youtube:hover span{
+    background: red;
+} 

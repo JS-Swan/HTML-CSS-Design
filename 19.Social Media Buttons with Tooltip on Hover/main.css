@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(315deg,#fff,#d7e1e1);
+}
+.wrapper{
+    display: inline-flex; 
+    /* Doubt */
+}
+.wrapper .icon{
+    margin: 0 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.680,-0.55,0.2,1.55);
+    /* Doubt */
+}
+.wrapper .icon span{
+    position: relative;
+    z-index: 2;
+    height: 60px;
+    width: 60px;
+    background: white;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+.wrapper .icon i{
+    font-size: 30px;
+    line-height: 60px;
+
+}
+.wrapper .icon:hover  span i{
+    color: #fff;
+}
+.wrapper .icon .tooltip{
+    position: absolute;
+    color: white;
+    background: #fff;
+    font-size: 25px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    top: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.680,-0.55,0.2,1.55);
+}
+.wrapper .icon:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    top: -75px;
+}
+.wrapper .icon .tooltip::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.680,-0.55,0.2,1.55);
+}
+
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before{
+    background: blue;
+} 
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before{
+    background: pink;
+} 
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before{
+    background: skyblue;
+} 
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before{
+    background: red;
+} 
+.wrapper .whatsapp:hover span,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before{
+    background: green;
+} 
