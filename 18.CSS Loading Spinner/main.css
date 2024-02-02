@@ -1,0 +1,79 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    background: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    /* background: red; */
+}
+
+.spinner .ball{
+  position: relative;
+}
+.spinner .top{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background: yellow;
+    border-radius: 50%;
+    top: -25px;
+    animation: top 1s infinite;
+}
+@keyframes top {
+    50%,100%{
+        top:25px
+    }
+}
+.spinner .right{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background: blue;
+    border-radius: 50%;
+    left: 25px;
+    animation: right 1s infinite;
+}
+@keyframes right {
+    50%,100%{
+        left: -25px;
+    }
+}
+.spinner .bottom{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background: green;
+    border-radius: 50%;
+    bottom: -25px;
+    animation: bottom 1s infinite;
+}
+@keyframes bottom {
+    50%,100%{
+        bottom: 25px;
+    }
+}
+.spinner .left{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background: #ff337a;
+    border-radius: 50%;
+    left: -25px;
+    animation:  left 1s infinite;
+}
+@keyframes left {
+    50%,100%{
+        left: 25px;
+    }
+}
