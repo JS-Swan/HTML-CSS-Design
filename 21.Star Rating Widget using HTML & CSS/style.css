@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.center{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.center .stars{
+    /* background: black; */
+    height: 150px;
+    width: 400px;
+    text-align: center;
+    
+}
+input[type="radio"]{
+    display: none;
+}
+.center label{
+    font-size: 80px;
+    margin: 0 5px;
+    color: lightslategray;
+    text-shadow: 2px 2px #bbb;
+    float: right;
+}
+.center label::before{
+    content: '★';
+}
+.stars input[type="radio"]:checked ~ label{
+    color: gold;
+    text-shadow: 2px 2px #c60;
+}
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label{
+    color: gold;
+}
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label{
+    color: gold;
+    text-shadow: 2px 2px goldenrod;
+}
+.stars .result:before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    font-size: 30px;
+    font-weight: 500;
+    color: gold;
+    display: none;
+    
+}
+.stars input:checked ~ .result:before{
+    display: block;
+    
+}
+.stars #five:checked ~ .result::before{
+    content: 'I love it🤩';
+}
+.stars #four:checked ~ .result::before{
+    content: 'I like it 😀';
+}
+.stars #three:checked ~ .result::before{
+    content: "It's ok ";
+}
+.stars #two:checked ~ .result::before{
+    content: "I don't like it";
+}
+.stars #one:checked ~ .result::before{
+    content: 'I hate it';
+}
